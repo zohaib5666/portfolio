@@ -758,12 +758,14 @@ document.addEventListener('DOMContentLoaded', () => {
   renderFooter();
 // existing calls...
 renderFooter();
-initMarquee(); // 👈 yeh add karo
+  initMarquee();
 
-  function initMarquee() {
+  // Init behaviours
+  initParticles();
+
+function initMarquee() {
   const track = document.getElementById('marquee-track');
   if (!track) return;
-  // Clone all items for seamless infinite loop
   const clone = track.innerHTML;
   track.innerHTML += clone;
 }
